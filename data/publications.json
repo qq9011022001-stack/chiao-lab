@@ -1,20 +1,11 @@
 [
  {
-  "type": "conf_zh",
-  "year": 2026,
-  "title": "管好你自己",
-  "authors": "",
-  "venue": "",
-  "note": "",
-  "corresponding": false
- },
- {
   "type": "journal_intl",
   "year": 2026,
   "authors": "Yu-Wei Chan, Hsin-Ta Chiao, Cenap Oztepe, Endah Kristiani, Chao-Tung Yang",
   "title": "Face mask detection model using deep learning on edge computing",
   "venue": "The Journal of Supercomputing, vol. 82, Art. no. 467, May 2026",
-  "note": "SCI-E, IF 3.5",
+  "note": " SCI, IF 3.5",
   "corresponding": false
  },
  {

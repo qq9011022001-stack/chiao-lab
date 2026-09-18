@@ -41,6 +41,10 @@ input.find{font:inherit;font-size:14px;padding:6px 12px;border:1px solid var(--l
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .rowbtns{display:flex;gap:8px;margin-top:6px}
 .count{color:var(--muted);font-size:13.5px}
+.cfg{border:1px solid var(--line);background:#fff;border-radius:6px;padding:18px 20px;margin-bottom:24px}
+.cfg h3{font-family:"Noto Serif TC",serif;color:var(--ink);font-size:16px;margin:0 0 14px}
+.cfg .hint{font-size:12.5px;color:var(--muted);line-height:1.7;margin:12px 0 0}
+.dirty{font-size:13px;color:var(--warn)}
 #toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:5px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none}
 #toast.show{opacity:1}
 @media(max-width:700px){.grid2{grid-template-columns:1fr}}
@@ -51,16 +55,35 @@ input.find{font:inherit;font-size:14px;padding:6px 12px;border:1px solid var(--l
 <header><div class="hin">
   <b>資料後台</b>
   <div class="bar" style="margin:0">
-    <button class="act ghost" id="btn-load-file">上傳 JSON 覆蓋</button>
-    <button class="act" id="btn-save">下載目前分頁的 JSON</button>
+    <span class="dirty" id="dirty"></span>
+    <button class="act" id="btn-push">儲存到 GitHub</button>
+    <button class="act ghost" id="btn-save">下載 JSON</button>
+    <button class="act ghost" id="btn-cfg">設定</button>
     <a class="act ghost" href="index.html" style="text-decoration:none;display:inline-block">回網站</a>
   </div>
 </div></header>
 
 <main>
   <div class="note">
-    <p><b>使用方式</b>：在這裡編輯資料 → 按「下載目前分頁的 JSON」→ 把下載的檔案上傳到 GitHub repo 的 <code>data/</code> 資料夾覆蓋同名檔案 → 網站幾分鐘內自動更新。</p>
-    <p>本頁不會自動存檔，也不會改到 GitHub 上的檔案。編輯完記得下載。</p>
+    <p><b>使用方式</b>：編輯資料後按右上角「<b>儲存到 GitHub</b>」，會直接寫回 repo，網站一到兩分鐘後自動更新。</p>
+    <p>第一次使用請先按「設定」填入存取權杖（Token）。若不想設定，也可以按「下載 JSON」後手動上傳到 GitHub。</p>
+  </div>
+
+  <div class="cfg" id="cfg-panel" hidden>
+    <h3>GitHub 連線設定</h3>
+    <div class="grid2">
+      <div class="f"><label for="c-owner">GitHub 帳號</label><input type="text" id="c-owner" placeholder="例如 oldyan"></div>
+      <div class="f"><label for="c-repo">Repository 名稱</label><input type="text" id="c-repo" placeholder="例如 chiao-lab"></div>
+      <div class="f"><label for="c-branch">分支</label><input type="text" id="c-branch" value="main"></div>
+      <div class="f"><label for="c-token">存取權杖 Personal Access Token</label><input type="password" id="c-token" placeholder="github_pat_... 或 ghp_..."></div>
+    </div>
+    <p class="hint">權杖存在這台電腦的瀏覽器裡，不會傳給任何第三方，只會用來呼叫 GitHub API。共用電腦請勿儲存。<br>
+    取得方式：GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → 選這個 repo → Repository permissions 的 <b>Contents</b> 設為 <b>Read and write</b>。</p>
+    <div class="rowbtns">
+      <button class="act" id="c-save">儲存設定</button>
+      <button class="act ghost" id="c-test">測試連線</button>
+      <button class="act danger" id="c-clear">清除權杖</button>
+    </div>
   </div>
 
   <div class="tabs" id="tabs"></div>
@@ -243,10 +266,10 @@ function render(){
 
   hits.forEach(({x,i})=>bindInputs(x,i));
   box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{
-    if(confirm('確定刪除？')){ getList(tab).splice(+b.dataset.del,1); render(); toast('已刪除，記得下載 JSON'); }
+    if(confirm('確定刪除？')){ getList(tab).splice(+b.dataset.del,1); mark(SCHEMA[tab].file); render(); toast('已刪除，記得按「儲存到 GitHub」'); }
   });
   box.querySelectorAll('[data-up]').forEach(b=>b.onclick=()=>{
-    const i=+b.dataset.up; if(i>0){ const l=getList(tab); [l[i-1],l[i]]=[l[i],l[i-1]]; render(); }
+    const i=+b.dataset.up; if(i>0){ const l=getList(tab); [l[i-1],l[i]]=[l[i],l[i-1]]; mark(SCHEMA[tab].file); render(); }
   });
 }
 
@@ -260,6 +283,7 @@ function bindInputs(obj,i){
       if(kind==='json'){ try{ v = JSON.parse(el.value); el.style.borderColor=''; }catch(e){ el.style.borderColor='#9c3b2b'; return; } }
       if(SCHEMA[tab].plain){ getList(tab)[i] = v; }
       else obj[k] = v;
+      mark(SCHEMA[tab].file);
     };
   });
 }
@@ -269,6 +293,7 @@ document.getElementById('find').oninput = e => { filter=e.target.value; render()
 document.getElementById('btn-add').onclick = () => {
   const s = SCHEMA[tab];
   getList(tab).unshift(s.plain ? s.blank : JSON.parse(JSON.stringify(s.blank)));
+  mark(s.file);
   filter=''; document.getElementById('find').value='';
   render();
   const first = document.querySelector('.item'); if(first) first.open = true;
@@ -292,11 +317,141 @@ document.getElementById('file').onchange = e => {
     try{
       const data = JSON.parse(fr.result);
       if(!FILES.includes(file.name)) return alert('檔名需為 '+FILES.join('、'));
-      store[file.name] = data; render(); toast(`已載入 ${file.name}`);
+      store[file.name] = data; mark(file.name); render(); toast(`已載入 ${file.name}`);
     }catch(err){ alert('JSON 格式錯誤：'+err.message); }
   };
   fr.readAsText(file);
   e.target.value='';
+};
+
+/* ---------- 未存檔追蹤 ---------- */
+const dirty = new Set();
+function mark(file){ dirty.add(file); paintDirty(); }
+function paintDirty(){
+  document.getElementById('dirty').textContent =
+    dirty.size ? `● ${dirty.size} 個檔案未儲存` : '';
+}
+window.addEventListener('beforeunload', e => {
+  if(dirty.size){ e.preventDefault(); e.returnValue=''; }
+});
+
+/* ---------- GitHub 設定 ---------- */
+const CFG_KEY = 'chiaolab-admin-cfg';
+const cfg = () => { try{ return JSON.parse(localStorage.getItem(CFG_KEY))||{}; }catch(e){ return {}; } };
+const ghHeaders = () => ({
+  'Authorization': 'Bearer ' + cfg().token,
+  'Accept': 'application/vnd.github+json',
+  'X-GitHub-Api-Version': '2022-11-28'
+});
+
+function guessRepo(){
+  // 從目前網址推測 owner / repo，省得手動填
+  const host = location.hostname, path = location.pathname.split('/').filter(Boolean);
+  const out = {};
+  if(host.endsWith('.github.io')){
+    out.owner = host.replace('.github.io','');
+    out.repo = path.length > 1 ? path[0] : host;   // 根網址時 repo 名 = 網域本身
+  }
+  return out;
+}
+
+function openCfg(){
+  const p = document.getElementById('cfg-panel');
+  p.hidden = !p.hidden;
+  if(!p.hidden){
+    const c = { ...guessRepo(), branch:'main', ...cfg() };
+    document.getElementById('c-owner').value = c.owner||'';
+    document.getElementById('c-repo').value = c.repo||'';
+    document.getElementById('c-branch').value = c.branch||'main';
+    document.getElementById('c-token').value = c.token||'';
+  }
+}
+document.getElementById('btn-cfg').onclick = openCfg;
+
+document.getElementById('c-save').onclick = () => {
+  localStorage.setItem(CFG_KEY, JSON.stringify({
+    owner: document.getElementById('c-owner').value.trim(),
+    repo: document.getElementById('c-repo').value.trim(),
+    branch: document.getElementById('c-branch').value.trim()||'main',
+    token: document.getElementById('c-token').value.trim()
+  }));
+  document.getElementById('cfg-panel').hidden = true;
+  toast('設定已儲存在這台電腦');
+};
+
+document.getElementById('c-clear').onclick = () => {
+  localStorage.removeItem(CFG_KEY);
+  document.getElementById('c-token').value='';
+  toast('權杖已清除');
+};
+
+document.getElementById('c-test').onclick = async () => {
+  const c = {
+    owner: document.getElementById('c-owner').value.trim(),
+    repo: document.getElementById('c-repo').value.trim(),
+    branch: document.getElementById('c-branch').value.trim()||'main',
+    token: document.getElementById('c-token').value.trim()
+  };
+  if(!c.owner||!c.repo||!c.token) return alert('請先填完帳號、repo 名稱與權杖。');
+  try{
+    const r = await fetch(`https://api.github.com/repos/${c.owner}/${c.repo}`,
+      { headers:{ 'Authorization':'Bearer '+c.token, 'Accept':'application/vnd.github+json' } });
+    if(r.ok){ const j = await r.json(); alert(`連線成功：${j.full_name}\n權限：${j.permissions&&j.permissions.push?'可寫入':'唯讀（權杖權限不足）'}`); }
+    else alert(`連線失敗（HTTP ${r.status}）\n${r.status===404?'找不到 repo，請檢查帳號與名稱拼字，或權杖沒有選到這個 repo。':r.status===401?'權杖無效或已過期。':''}`);
+  }catch(e){ alert('連線錯誤：'+e.message); }
+};
+
+/* UTF-8 轉 base64（GitHub API 只收 base64） */
+function toBase64(str){
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  for(let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i,i+0x8000));
+  return btoa(bin);
+}
+
+async function pushFile(file, msg){
+  const c = cfg();
+  const url = `https://api.github.com/repos/${c.owner}/${c.repo}/contents/data/${file}`;
+  // 先取得現有檔案的 sha：GitHub 用它確認你是在改「最新版」，避免蓋掉別人的修改
+  let sha = null;
+  const got = await fetch(`${url}?ref=${c.branch}`, { headers: ghHeaders(), cache:'no-store' });
+  if(got.ok) sha = (await got.json()).sha;
+  else if(got.status !== 404) throw new Error(`讀取 ${file} 失敗（HTTP ${got.status}）`);
+
+  const res = await fetch(url, {
+    method:'PUT', headers: ghHeaders(),
+    body: JSON.stringify({
+      message: msg,
+      content: toBase64(JSON.stringify(store[file], null, 1)),
+      branch: c.branch,
+      ...(sha ? { sha } : {})
+    })
+  });
+  if(!res.ok){
+    const j = await res.json().catch(()=>({}));
+    throw new Error(`${file}：HTTP ${res.status} ${j.message||''}`);
+  }
+}
+
+document.getElementById('btn-push').onclick = async () => {
+  const c = cfg();
+  if(!c.token || !c.owner || !c.repo){ openCfg(); return alert('請先完成 GitHub 連線設定。'); }
+  if(!dirty.size) return toast('目前沒有需要儲存的變更');
+
+  const btn = document.getElementById('btn-push');
+  const files = [...dirty];
+  btn.disabled = true; btn.textContent = '儲存中…';
+  try{
+    for(const f of files){
+      await pushFile(f, `更新 ${SCHEMA[tab] ? '網站資料' : ''}${f}`.trim());
+      dirty.delete(f); paintDirty();
+    }
+    toast(`已儲存 ${files.length} 個檔案，網站約 1–2 分鐘後更新`);
+  }catch(e){
+    alert('儲存失敗：\n' + e.message + '\n\n可先用「下載 JSON」保存目前的修改，避免資料遺失。');
+  }finally{
+    btn.disabled = false; btn.textContent = '儲存到 GitHub';
+  }
 };
 
 boot();

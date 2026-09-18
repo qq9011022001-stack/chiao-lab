@@ -1,0 +1,1109 @@
+[
+ {
+  "type": "journal_intl",
+  "year": 2026,
+  "authors": "Yu-Wei Chan, Hsin-Ta Chiao, Cenap Oztepe, Endah Kristiani, Chao-Tung Yang",
+  "title": "Face mask detection model using deep learning on edge computing",
+  "venue": "The Journal of Supercomputing, vol. 82, Art. no. 467, May 2026",
+  "note": "SCI-E, IF 3.5",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2026,
+  "authors": "Hsin-Ta Chiao, Wei-Wen Lin, Shang-Yang Tseng, Yu-Cheng Hsieh, Chao-Tung Yang",
+  "title": "Echocardiography Report Translation and Inference Based on Parameter-Efficient Fine-Tuning of LLaMA Models",
+  "venue": "Diagnostics, vol. 16, Art. no. 1223, Apr. 2026",
+  "note": "SCI-E, IF 3.0",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2026,
+  "authors": "Shih-Yuan Yang, Yu-Hsin Tien, Cheng-Jui Lai, Yue-Shan Chang, Hsin-Ta Chiao",
+  "title": "Enhancing Wind Turbine Blade Defect Detection Using UAV and Laboratory Images via Synthetic Data Augmentation",
+  "venue": "IEEE 30th Jubilee International Conference on Intelligent Engineering Systems (INES 2026), July 2026",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2026,
+  "authors": "Jia-Sheng Wu, Wei-Che Liao, Lung-Pin Chen, Hsin-Ta Chiao",
+  "title": "A Hybrid ACO-GA Approach for Drone Food Delivery Path Planning in Campus Environments",
+  "venue": "IEEE 30th Jubilee International Conference on Intelligent Engineering Systems (INES 2026), July 2026",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2026,
+  "authors": "Jia-Luo Yan, Yun-Han Hsieh, Dai-Lun Chiang, Hsin-Ta Chiao",
+  "title": "Detection and Analysis of Phishing Emails Using Time-Series Models",
+  "venue": "IEEE 30th Jubilee International Conference on Intelligent Engineering Systems (INES 2026), July 2026",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2026,
+  "authors": "季柏毅、張玉山、劉榮春、焦信達",
+  "title": "CLIP 少樣本影像檢索與 FAISS 索引之實證分析",
+  "venue": "2026 臺灣雲端與服務計算研討會 (TWSC2 2026)，2026 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2026,
+  "authors": "李睦澄、吳添舜、尹顯靖、張玉山、劉榮春、焦信達",
+  "title": "針對校園動態環境導覽系統之 ARAG、REALM 與 ColBERT 對比研究",
+  "venue": "2026 臺灣雲端與服務計算研討會 (TWSC2 2026)，2026 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2026,
+  "authors": "焦信達、楊朝棟、季柏毅、陳宥儒、葉鑫、林聖達、吳威宏",
+  "title": "無人機軟體研發課程導入數位孿生環境之教學實踐研究",
+  "venue": "2026 創新教育與教學實踐論壇，2026 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2026,
+  "authors": "嚴家洛、謝昀翰、江岱倫、焦信達",
+  "title": "使用時間序模型偵測釣魚郵件之分析",
+  "venue": "第 20 屆創新、管理與知識社群國際研討會 (iCIMKC 2026)，2026 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "journal_intl",
+  "year": 2025,
+  "authors": "Chih-Hung Chang, Hsin-Ta Chiao, Hsiang-Ching Chang, Endah Kristiani, Chao-Tung Yang",
+  "title": "A predictive maintenance architecture for TFT-LCD manufacturing using machine learning on the cloud service",
+  "venue": "Internet of Things, vol. 31, Feb. 2025",
+  "note": "SCI, IF 6.0",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2025,
+  "authors": "Shang-En Liu, Hsin-Ta Chiao, Yue-Shan Chang, Chiao-Ling Chang, Yu-Wei Wang",
+  "title": "Performance Analysis of LLM-Based Virtual Guides for Factory Digital Twins within a Metaverse Environment",
+  "venue": "2025 International Conference on Information Management, May 2025",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2025,
+  "authors": "Sheng-Ta Lin, Wei-Hung Wu, Yan-Ting Wu, Hsin-Ta Chiao",
+  "title": "Battlefield Applications of Drone Swarms Based on Proximal Policy Optimization Reinforcement Learning",
+  "venue": "IEEE 5th International Conference on Electronic Communications, Internet of Things and Big Data (IEEE ICEIB 2025), Apr. 2025",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "吳柏佑、楊朝棟、焦信達",
+  "title": "元宇宙中基於大型語言模型之 AI 虛擬導覽員",
+  "venue": "2025 臺灣雲端與服務計算研討會 (TWSC2 2025)，2025 年 7 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "張廷夆、陳威翔、張玉山、劉榮春、焦信達",
+  "title": "Chat2Temi - 整合情緒感知的導覽機器人智能語音問答系統",
+  "venue": "2025 臺灣雲端與服務計算研討會 (TWSC2 2025)，2025 年 7 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "周品淵、林佑融、王槐山、張廷夆、張玉山、焦信達",
+  "title": "整合光學字元辨識與多模式搜尋之數學拍照搜題 App",
+  "venue": "2025 臺灣雲端與服務計算研討會 (TWSC2 2025)，2025 年 7 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "張家寶、劉柏均、季柏毅、焦信達",
+  "title": "Temi 機器人多模態 LLM 系所導覽系統",
+  "venue": "2025 數位生活科技研討會暨民生電子論壇 (DLT 2025)，2025 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "黃麒樺、張廷夆、焦信達",
+  "title": "基於 Advanced RAG 的食材匹配與家庭食譜推薦應用",
+  "venue": "2025 數位生活科技研討會暨民生電子論壇 (DLT 2025)，2025 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "曾立民、焦信達",
+  "title": "探索暗網生成惡意郵件的識別技術",
+  "venue": "2025 數位生活科技研討會暨民生電子論壇 (DLT 2025)，2025 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "陳柏瑄、林珮如、焦信達、楊朝棟",
+  "title": "基於 Numeric Match 的計算機組織 AI 問答性能比較：Zero-shot 與 RAG 的分析",
+  "venue": "2025 數位生活科技研討會暨民生電子論壇 (DLT 2025)，2025 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2025,
+  "authors": "曾上洋、林維文、焦信達、楊朝棟",
+  "title": "結合 Llama 與 LoRA 微調技術之英文心臟超音波報告中文翻譯研究",
+  "venue": "2025 數位生活科技研討會暨民生電子論壇 (DLT 2025)，2025 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2024,
+  "authors": "Chu-Hsing Lin, Chao-Ting Yu, Yan-Ling Chen, Yu-Yu Lin, Hsin-Ta Chiao",
+  "title": "Simulated Adversarial Attacks on Traffic Sign Recognition of Autonomous Vehicles",
+  "venue": "2024 IEEE 6th Eurasia Conference on IoT, Communication and Engineering (IEEE ECICE 2024), Oct. 2024",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2024,
+  "authors": "王中廷、陳宏銘、葉鑫、焦信達",
+  "title": "虛擬資料及擴充資料集方法對空照人像圖預測之成效研究",
+  "venue": "2024 台灣網際網路研討會 (TANET 2024)，2024 年 10 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2024,
+  "authors": "陳孟欽、焦信達",
+  "title": "基於 Transformer 的深度學習模型價格預測以台指期貨為案例",
+  "venue": "2024 數位生活科技研討會暨民生電子論壇 (DLT 2024)，2024 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2024,
+  "authors": "陳品樺、廖羿芸、陳君典、張廷夆、焦信達",
+  "title": "無人機太陽能板瑕疵檢測模擬",
+  "venue": "第 18 屆創新、管理與知識社群國際研討會 (iCIMKC 2024)，2024 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "report",
+  "year": 2024,
+  "authors": "焦信達、蔡坤霖、林祝興、許宏誌、張廷夆、蔡弘軒、吳柏佑、林彥成、陳君典、姜家傑",
+  "title": "高電磁干擾環境下的視訊傳輸通訊協定與通道編碼之研究 – 期末報告",
+  "venue": "科技部國防科技探索計畫，2024 年 12 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2023,
+  "authors": "吳致達、黃耀宗、江日騫、吳柏佑、焦信達",
+  "title": "元宇宙現在與未來的展望",
+  "venue": "元宇宙現在與未來的展望白皮書，中華物聯網與人工智慧研究學會，ISBN 978-626-976-650-5，2023 年 8 月",
+  "note": "專書",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2023,
+  "authors": "許資汯、林祝興、焦信達",
+  "title": "頭皮健康狀態自動偵測技術",
+  "venue": "2023 全國計算機會議 (NCS 2023)，2023 年 11 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "report",
+  "year": 2023,
+  "authors": "焦信達、蔡坤霖、林祝興、許宏誌、張廷夆、蔡弘軒、吳柏佑、林彥成",
+  "title": "高電磁干擾環境下的視訊傳輸通訊協定與通道編碼之研究 – 期中報告",
+  "venue": "科技部國防科技探索計畫，2023 年 7 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2022,
+  "authors": "Lung-Pin Chen, Fang-Yie Leu, Hsin-Ta Chiao, Hung-Jr Shiu",
+  "title": "Adaptive resource management for spot workers in cloud computing environment",
+  "venue": "International Journal of Web and Grid Services, vol. 18, no. 4, pp. 437-452, 2022",
+  "note": "SCI, IF 1.0",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "吳心媛、姜柏羽、林彥成、焦信達",
+  "title": "擴增實境繪本應用實作",
+  "venue": "第 20 屆管理學術研討會 (SOD 2022)，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "李芝霖、歐宇傑、葉乃瑄、黃群琳、蔡弘軒、焦信達",
+  "title": "擴增實境車主手冊實作",
+  "venue": "第 20 屆管理學術研討會 (SOD 2022)，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "林育德、魏煦晨、蔡子龍、馮承霆、許鴻均、焦信達",
+  "title": "動態二維條碼技術之研究",
+  "venue": "第 20 屆管理學術研討會 (SOD 2022)，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "張閔揚、謝天祥、吳品萱、吳佩霖、焦信達、李瑞彬、王耀德、鄭琮潔",
+  "title": "數位旅遊臺灣趣 App 及其數據分析系統",
+  "venue": "第 20 屆管理學術研討會 (SOD 2022)，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "江孟璇、史民玉、謝佳如、吳柏佑、焦信達、楊朝棟",
+  "title": "以感性工學程序建構教學平台系統之研究",
+  "venue": "第 20 屆管理學術研討會 (SOD 2022)，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "王瑋麒、吳承翰、莊迺盛、張廷夆、張閔揚、焦信達",
+  "title": "Temi 機器人語音導覽應用",
+  "venue": "2022 智慧永續循環技術研討會暨專題競賽，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "梁致豪、許祐瑜、許永紳、張閔揚、林彥成、焦信達",
+  "title": "3D AR 傢具組裝輔助系統",
+  "venue": "2022 智慧永續循環技術研討會暨專題競賽，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "許鴻均、馮承霆、焦信達",
+  "title": "標籤化元宇宙 3D 場景重建",
+  "venue": "2022 智慧永續循環技術研討會暨專題競賽，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "楊翔宇、許詠祺、焦信達",
+  "title": "動物自動辨識飼料盆之設計與實作",
+  "venue": "2022 智慧永續循環技術研討會暨專題競賽，2022 年 12 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "吳品萱、張尊傑、吳佩霖、焦信達、楊昕倫、張廷夆",
+  "title": "3D 設計圖自動展開與成本估算系統",
+  "venue": "2022 人工智慧技術及應用研討會 (AITA 2022)，2022 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_zh",
+  "year": 2022,
+  "authors": "張幃閎、周奕志、焦信達、王瑋麒、吳承翰、莊迺盛、張廷夆",
+  "title": "Temi 機器人之導覽互動應用",
+  "venue": "2022 人工智慧技術及應用研討會 (AITA 2022)，2022 年 5 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2021,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao, Ruey-Kai Sheu, Lun-Chi Chen, Welly",
+  "title": "Accelerating Transmission of Streaming Files Based on AL-FEC Protection Blocks",
+  "venue": "IEEE 45th Annual Computers, Software, and Applications Conference (COMPSAC 2021), pp. 1188-1193, July 2021",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2021,
+  "authors": "Lung-Pin Chen, Fang-Yie Leu, Hsin-Ta Chiao, Hung-Jr Shiu",
+  "title": "Efficient Adaptive Resource Management for Spot Workers in Cloud Computing Environment",
+  "venue": "International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS 2021), pp. 373-382, July 2021",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2021,
+  "authors": "黃英喬、焦信達、林祝興、蔡汶妗、方國俊",
+  "title": "基於 #1 機的共享經濟與協同消費商業模式之探討",
+  "venue": "2021 全國計算機會議 (NCS 2021)，2021 年 12 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2021,
+  "authors": "李瑞彬、焦信達、謝天祥、張閔揚",
+  "title": "雲端化觀光 O2O APP 及其大數據分析系統",
+  "venue": "2021 數位生活科技研討會 (DLT 2021)，2021 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2020,
+  "authors": "Yue-Shan Chang, Satheesh Abimannan, Hsin-Ta Chiao, Chi-Yeh Lin, Yo-Ping Huang",
+  "title": "An Ensemble Learning based Hybrid Model and Framework for Air Pollution Forecasting",
+  "venue": "Environmental Science and Pollution Research, vol. 27, pp. 38155-38168, 2020",
+  "note": "SCI, IF 5.19",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2020,
+  "authors": "Yue-Shan Chang, Hsin-Ta Chiao, Satheesh Abimannan, Yo-Ping Huang, Yi-Ting Tsai, Kuan-Ming Lin",
+  "title": "An LSTM-based aggregated model for air pollution forecasting",
+  "venue": "Atmospheric Pollution Research, vol. 11, no. 8, pp. 1451-1463, Aug. 2020",
+  "note": "SCI, IF 4.352",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2020,
+  "authors": "Yo-Ping Huang, Haobijam Basanta, Hung-Chou Kuo, Hsin-Ta Chiao",
+  "title": "Sensor-Based Detection of Abnormal Events for Elderly People Using Deep Belief Networks",
+  "venue": "International Journal of Ad Hoc and Ubiquitous Computing, vol. 33, no. 1, pp. 36-47, Jan. 2020",
+  "note": "SCI, IF 0.773",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2020,
+  "authors": "張廷夆、焦信達、陳慶洋",
+  "title": "工業物聯網之資料收集技術",
+  "venue": "2020 臺灣網際網路研討會 (TANET 2020)，2020 年 10 月",
+  "note": "",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2019,
+  "authors": "Chi-Yeh Lin, Yue-Shan Chang, Hsin-Ta Chiao, Satheesh Abimannan",
+  "title": "Design a Hybrid Framework for Air Pollution Forecasting",
+  "venue": "2019 IEEE International Conference on Systems, Man and Cybernetics (SMC), Oct. 2019",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2018,
+  "authors": "Chia-Feng Lin, Hsin-Ta Chiao, Ruey-Kai Sheu, Yue-Shan Chang, Shyan-Ming Yuan",
+  "title": "A Fault-Tolerant ONVIF Protocol Extension for Seamless Surveillance Video Stream Recording",
+  "venue": "Computer Standards and Interfaces, vol. 55, pp. 55-72, Jan. 2018",
+  "note": "SCI, IF 4.6",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2018,
+  "authors": "Wei-Ting Sun, Hsin-Ta Chiao, Yue-Shan Chang, Shyan-Ming Yuan",
+  "title": "Forecasting Monthly Average of Taiwan Stock Exchange Index",
+  "venue": "2018 International Computer Symposium (ICS 2018), Dec. 2018",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2018,
+  "authors": "袁國凱、焦信達、許瑞愷、張哲彬、袁賢銘",
+  "title": "統合式雲端儲存服務",
+  "venue": "2018 臺灣網際網路研討會 (TANET 2018)，2018 年 10 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2017,
+  "authors": "Shiuan-Tung Chen, Hsin-Ta Chiao, Shih-Ying Chang, Hung-Min Sun",
+  "title": "Fast and Low-Complexity Encoding of Raptor Codes Based on Operation Lists for Known Block Lengths",
+  "venue": "Multimedia Tools and Applications, vol. 76, no. 7, pp. 9219-9243, Apr. 2017",
+  "note": "SCI, IF 3.0",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2017,
+  "authors": "Che-Pin Chang, Hsin-Ta Chiao, Yue-Shan Chang, Ching-Tsorng Tsai, Kuo-Kai Yuen, Shyan-Ming Yuan",
+  "title": "UCS - A Unified Cloud Storage Integration Service",
+  "venue": "7th IEEE International Symposium on Cloud and Service Computing (IEEE SC2 2017), pp. 245-248, Nov. 2017",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2017,
+  "authors": "Hsin-Ta Chiao, Chia-Feng Lin, Yue-Shan Chang, Ruey-Kai Sheu, Lung-Pin Chen, Shyan-Ming Yuan",
+  "title": "A Fault-Tolerant ONVIF Protocol Extension for Cloud-Based Surveillance Systems",
+  "venue": "7th IEEE International Symposium on Cloud and Service Computing (IEEE SC2 2017), pp. 201-208, Nov. 2017",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2016,
+  "authors": "Shiuan-Tung Chen, Hsin-Ta Chiao, Shih-Ying Chang, Ruey-Kai Sheu, Hung-Min Sun",
+  "title": "Personal Video Delivery with Rapid Raptor Code Decoder",
+  "venue": "Personal and Ubiquitous Computing, vol. 20, no. 6, pp. 915-931, Nov. 2016",
+  "note": "SCI, IF 3.8",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2015,
+  "authors": "Shiuan-Tung Chen, Hsin-Ta Chiao, Shih-Ying Chang, Hung-Min Sun",
+  "title": "Accelerating Raptor Code Decoding Using Group Parameters for IPTV Service Delivery",
+  "venue": "5th International Symposium on Cloud and Service Computing (SC2 2015), Dec. 2015",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2014,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao, Yu-Hsiang Hung",
+  "title": "Ideal Forward Error Correction Codes for High-Speed Rail Multimedia Communications",
+  "venue": "IEEE Transactions on Vehicular Technology, vol. 63, no. 8, pp. 3517-3529, Oct. 2014",
+  "note": "SCI, IF 7.1",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2014,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "An Inter-Layer Protection Scheme with Block-Based Interleaving for MPEG-DASH over WiFi Multicast",
+  "venue": "IEEE 79th Vehicular Technology Conference (VTC Spring 2014), pp. 1-5, May 2014",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2014,
+  "authors": "焦信達",
+  "title": "借力 FLUTE 通訊協定 LTE Broadcast 紓解網路流量",
+  "venue": "《新電子雜誌》，2014 年 8 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "Adaptive Streaming Schemes for MPEG-DASH over WiFi Multicast",
+  "venue": "15th IEEE International Conference on Communication Technology (ICCT), pp. 168-173, Nov. 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao, Xin-Yan Yeh, Ming-Chien Tseng",
+  "title": "UDP-Based File Delivery Mechanism for Video Streaming to High-Speed Trains",
+  "venue": "24th IEEE Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC), pp. 3568-3572, Sep. 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Hsin-Ta Chiao, Shih-Ying Chang, Yi-Ting Kuo, Ming Jing Li, Ming-Chien Tseng",
+  "title": "A Multicast Streaming System for Live TV Delivery Inside High-Speed Trains",
+  "venue": "2013 Asia-Pacific Radio Science Conference, Sep. 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Hsin-Ta Chiao, Shih-Ying Chang, Yi-Ting Kuo, Ming Jing Li, Ming-Chien Tseng",
+  "title": "A Mobile Live TV System for Taiwan High-Speed Rail",
+  "venue": "11th ACM International Conference on Mobile Systems, Applications and Services (MobiSys), pp. 501-502, June 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Shiuan-Tung Chen, Hsin-Ta Chiao, Shih-Ying Chang, Hung-Min Sun, Pei-Shan Zeng",
+  "title": "An HD Streaming System for WiFi Multicast Channels Based on Application-Layer FEC",
+  "venue": "IEEE 17th International Symposium on Consumer Electronics (ISCE), pp. 85-86, June 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Ming-Jing Li, Shih-Ying Chang, Hsin-Ta Chiao, Yi-Ting Kuo",
+  "title": "Implementation of Inter-Layer Protection Scheme for SVC Video Delivery over WiFi Networks",
+  "venue": "IEEE 17th International Symposium on Consumer Electronics (ISCE), June 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2013,
+  "authors": "Shiuan-Tung Chen, Hsin-Ta Chiao, Shih-Ying Chang, Hung-Min Sun, Chia-Hsing Ho",
+  "title": "Efficient Encoding of Systematic Raptor Codes Based on Operation Lists for Known Block Lengths",
+  "venue": "IEEE Wireless Communications and Networking Conference (WCNC), pp. 4689-4694, Apr. 2013",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2013,
+  "authors": "張仕穎、焦信達、郭宜婷、黎明璟",
+  "title": "基於 AL-FEC 的可適性視訊編碼傳輸保護機制",
+  "venue": "《電腦與通訊》，第 152 期，2013 年 8 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2013,
+  "authors": "焦信達、張仕穎、陳宣同、孫宏民",
+  "title": "一種 Raptor Code 的高效率編碼方法",
+  "venue": "《電腦與通訊》，第 152 期，2013 年 8 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2013,
+  "authors": "焦信達、張仕穎、郭宜婷",
+  "title": "高鐵列車上的 Live TV Multicast 服務",
+  "venue": "《網路通訊國家型科技計畫簡訊》，第 49 期，2013 年 3 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2012,
+  "authors": "Shih-Ying Chang, Xin-Yan Yeh, Hsin-Ta Chiao, Hung-Min Sun",
+  "title": "UDP-Based Reliable File Delivery Mechanisms for Video Streaming over Unstable Wireless Networks",
+  "venue": "International Computer Symposium (ICS), pp. 561-570, Dec. 2012",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2012,
+  "authors": "Hsin-Ta Chiao, Shih-Ying Chang, Kuan-Ming Li, Yi-Ting Kuo, Ming-Chien Tseng",
+  "title": "WiFi Multicast Streaming Using AL-FEC Inside the Trains of High-Speed Rails",
+  "venue": "IEEE International Symposium on Broadband Multimedia Systems and Broadcasting (BMSB), pp. 1-6, 2012",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2012,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "LIPS: A Lightweight Inter-layer Protection Scheme for Scalable Video Coding",
+  "venue": "IEEE International Conference on Multimedia and Expo (ICME), pp. 908-913, July 2012",
+  "note": "Oral session，論文接受率 13%",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2012,
+  "authors": "Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "CRT-Based AL-FEC and Its Application on Streaming over the WiMAX Networks for High-Speed Rail Reception",
+  "venue": "IEEE 75th Vehicular Technology Conference (VTC Spring 2012), pp. 1-6, May 2012",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2012,
+  "authors": "焦信達、張仕穎、郭宜婷、曾銘健、黎冠銘",
+  "title": "高鐵列車內使用 AL-FEC 之 WiFi 多播串流服務",
+  "venue": "《電腦與通訊》，第 146 期，2012 年 8 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2012,
+  "authors": "張仕穎、焦信達",
+  "title": "基於中國餘式定理的應用層前向錯誤更正技術及其在高鐵 WiMAX 網路上的應用",
+  "venue": "《電腦與通訊》，第 144 期，2012 年 4 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2011,
+  "authors": "Hsin-Ta Chiao, Kuan-Ming Li, Jhih-Wei Jiang, Yi-Ting Kuo, Ming-Chien Tseng",
+  "title": "Mobile TV Streaming over the Mobile WiMAX Network for High-Speed Rail Reception",
+  "venue": "2011 IEEE Region 10 Conference (TENCON), pp. 1289-1293, Nov. 2011",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2011,
+  "authors": "Hsin-Ta Chiao, Kuan-Ming Li",
+  "title": "Performance of the File Delivery Protocols over Mobile TV Interactive Channels",
+  "venue": "IEEE International Conference on Communications (ICC), pp. 1-6, June 2011",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2011,
+  "authors": "Yang-Bin Lin, Hsin-Ta Chiao, Jhih-Wei Jiang, Ming-Chien Tseng, Sz-Kai Wen, Shi-Yang Chen",
+  "title": "SVC Adaptive Layer Switching Algorithms over the WiMAX Network for Taiwan High Speed Rail",
+  "venue": "IEEE International Symposium on Broadband Multimedia Systems and Broadcasting (BMSB), pp. 1-5, 2011",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2010,
+  "authors": "Rui-Yen Chang, Hsin-Ta Chiao, Chin-Lung Lee, Yu-Cheng Chen",
+  "title": "Applications for IP Video Surveillance over the ITRI MTWAL",
+  "venue": "Journal of Networks, vol. 5, no. 8, pp. 971-976, Aug. 2010",
+  "note": "EI",
+  "corresponding": true
+ },
+ {
+  "type": "conf_intl",
+  "year": 2010,
+  "authors": "Hsin-Ta Chiao, Kuan-Ming Li, Hung-Min Sun, Shih-Ying Chang, Hsin-An Hou",
+  "title": "Application-Layer FEC for File Delivery over the WiMAX Unicast Networks",
+  "venue": "12th IEEE International Conference on Communication Technology (ICCT), pp. 685-688, Nov. 2010",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2010,
+  "authors": "Chien-Ming Chen, Hsin-Ta Chiao, Shiuan-Tung Chen, Hung-Min Sun",
+  "title": "A New Business Model in Pay-TV Broadcasting Systems and Its Conditional Access System",
+  "venue": "2010 IEEE Region 10 Conference (TENCON), pp. 797-802, Nov. 2010",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2010,
+  "authors": "Hsin-Ta Chiao, Chi-Te Tseng, Jhih-Wei Jiang, Hsin-An Hou",
+  "title": "Hybrid Streaming Delivery over DVB-H Broadcast and WiMAX Mobile Networks",
+  "venue": "IEEE 6th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp. 398-405, Oct. 2010",
+  "note": "論文接受率 29.46%",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2010,
+  "authors": "焦信達、江志偉",
+  "title": "在 DVB-H 與 WiMAX 匯流網路上的串流傳送技術探討",
+  "venue": "《電腦與通訊》，第 136 期，2010 年 12 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2010,
+  "authors": "焦信達、許榮光",
+  "title": "相容於 ONVIF 標準之移動式 IP 攝影機的位置回報機制",
+  "venue": "《電腦與通訊》，第 135 期，2010 年 10 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Hung-Min Sun, Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "A Commitment-Based Scheme for Securing Vandermonde Codes Against Pollution Attacks",
+  "venue": "IEEE International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS), pp. 591-594, Dec. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Yung-Wei Kao, Ching-Tsorng Tsai, Wei-Hsiang Hung, Shyan-Ming Yuan, Hsin-Ta Chiao",
+  "title": "A Cross-Platform P2P-Based Blog System",
+  "venue": "7th International Conference on Advances in Mobile Computing and Multimedia (MoMM), pp. 510-513, Dec. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Hung-Min Sun, Shih-Ying Chang, Yu-Hsiang Hung, Yu-Kai Tseng, Hsin-Ta Chiao",
+  "title": "Decomposable Forward Error Correction Codes Based on Chinese Remainder Theorem",
+  "venue": "10th International Symposium on Pervasive Systems, Algorithms, and Networks (ISPAN), pp. 260-265, Dec. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Yu-Liang Chen, Guang-Ming Li, Ching-Tsorng Tsai, Shyan-Ming Yuan, Hsin-Ta Chiao",
+  "title": "Regenerating Code Based P2P Storage Scheme with Caching",
+  "venue": "4th International Conference on Computer Sciences and Convergence Information Technology (ICCIT), pp. 172-177, Nov. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Hsin-Ta Chiao",
+  "title": "Advances in Mobility Management of DVB-H Mobile TV Systems",
+  "venue": "2009 IEEE Region 10 Conference (TENCON), pp. 1-6, Nov. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2009,
+  "authors": "Hung-Min Sun, Shih-Ying Chang, Hsin-Ta Chiao",
+  "title": "Polynomial Interpolation Codes for Reliable Multicast Data Distribution",
+  "venue": "2009 IEEE Region 10 Conference (TENCON), pp. 1-6, Nov. 2009",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2009,
+  "authors": "Hsin-Ta Chiao",
+  "title": "The Timing and Synchronization Issues for Presenting an RTP Streaming Service",
+  "venue": "DVB TM-CBMS Contribution 2321, 64th DVB-TM-CBMS Meeting, Sep. 2009",
+  "note": "Approved",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2009,
+  "authors": "Hsin-Ta Chiao",
+  "title": "Inter-Terminal Synchronization for Presenting an RTP Streaming Service",
+  "venue": "DVB TM-CBMS Contribution 2306, 63rd DVB-TM-CBMS Meeting, May 2009",
+  "note": "Approved",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2009,
+  "authors": "Hsin-Ta Chiao",
+  "title": "ESG Enhancement for Providing Customized Roaming Information",
+  "venue": "DVB TM-CBMS Contribution 2305, 63rd DVB-TM-CBMS Meeting, May 2009",
+  "note": "Noted",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2009,
+  "authors": "Hsin-Ta Chiao",
+  "title": "The Issue of Asynchronously Presenting an RTP Service among DVB-H Terminals",
+  "venue": "DVB TM-CBMS Contribution 2290, 62nd DVB-TM-CBMS Meeting, Mar. 2009",
+  "note": "Approved",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2008,
+  "authors": "Hsin-Ta Chiao",
+  "title": "Comparison of the Notification Services Between OMA BCAST 1.0 and DVB-IPDC Phase 2",
+  "venue": "11th IEEE Singapore International Communication Systems (ICCS), pp. 327-331, Nov. 2008",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2008,
+  "authors": "Hsin-Ta Chiao",
+  "title": "Comparison of OMA BCAST 1.0 Service Guide with DVB-IPDC Phase 1 ESG over DVB-H",
+  "venue": "5th International Conference on Mobile Technology, Applications, and Systems (Mobility Conference), Sep. 2008",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2008,
+  "authors": "Hsin-Ta Chiao",
+  "title": "Comments on TM-CBMS 2175",
+  "venue": "DVB TM-CBMS Contribution 2179, 58th DVB-TM-CBMS Meeting, June 2008",
+  "note": "Approved",
+  "corresponding": false
+ },
+ {
+  "type": "standard",
+  "year": 2008,
+  "authors": "Hsin-Ta Chiao",
+  "title": "CR on TM-CBMS 1943r20",
+  "venue": "DVB TM-CBMS Contribution 2177, 58th DVB-TM-CBMS Meeting, June 2008",
+  "note": "Noted",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2008,
+  "authors": "焦信達",
+  "title": "DVB-H 行動電視服務層標準競賽 - OMA BCAST v.s. DVB-IPDC",
+  "venue": "《通訊工業年鑑》，2008 年 6 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2008,
+  "authors": "焦信達",
+  "title": "DVB-H 行動電視系統的檔案廣播機制 - 細說 FLUTE 通訊協定",
+  "venue": "《電子與電腦》，2008 年 1 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2008,
+  "authors": "焦信達",
+  "title": "DVB-SH 行動電視系統的 Handover 技術",
+  "venue": "《電腦與通訊》，第 126 期，2008 年 12 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2007,
+  "authors": "焦信達",
+  "title": "DVB-H 廣播網路上的 Handover 技術",
+  "venue": "《電腦與通訊》，第 122 期，2007 年 12 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2007,
+  "authors": "焦信達",
+  "title": "探究 PSI/SI 技術元件",
+  "venue": "《新通訊元件雜誌》，2007 年 6 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2007,
+  "authors": "焦信達",
+  "title": "加速行動電視普及化 - DVB-IPDC 標準扮要角",
+  "venue": "《新通訊元件雜誌》，2007 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_zh",
+  "year": 2007,
+  "authors": "焦信達",
+  "title": "IPDC 關鍵技術探索",
+  "venue": "《通訊工業年鑑》，2007 年 5 月",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2006,
+  "authors": "Hsin-Ta Chiao, Kuo-Shu Hsu, Yu-Kai Chen, Shyan-Ming Yuan",
+  "title": "A Template-Based MHP Authoring Tool",
+  "venue": "IEEE International Conference on Computer and Information Technology (CIT), Sep. 2006",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2006,
+  "authors": "Hsin-Ta Chiao, Fang-Chu Chen, Kuo-Shu Hsu, Shyan-Ming Yuan",
+  "title": "Video Everywhere Through a Scalable IP-Streaming Service Framework",
+  "venue": "3rd International Symposium on Wireless Communication Systems (ISWCS), pp. 190-194, Sep. 2006",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "report",
+  "year": 2005,
+  "authors": "焦信達、王鴻智、石佳相、梁修淵、黃淑敏",
+  "title": "無線數位電視多媒體共通平臺技術規範",
+  "venue": "電信廣字第 09405064120 號，國家通訊傳播委員會（原電信總局）法規，2005 年 8 月",
+  "note": "工研院技資編號 113930803",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2003,
+  "authors": "Tsun-Yu Hsiao, Ming-Chun Cheng, Hsin-Ta Chiao, Shyan-Ming Yuan",
+  "title": "FJM: A High Performance Java Message Library",
+  "venue": "IEEE International Conference on Cluster Computing, pp. 460-463, Dec. 2003",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2002,
+  "authors": "Hsin-Ta Chiao, Scott Hsu-Jing Kao, Yue-Shan Chang, Shen-Tzay Huang, Shyan-Ming Yuan",
+  "title": "Experience in Building a Real-Time Extension Library for Java",
+  "venue": "Journal of Information Science and Engineering, vol. 18, no. 6, pp. 905-927, Nov. 2002",
+  "note": "SCI, IF 0.9",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2002,
+  "authors": "Hsin-Ta Chiao, Chun-Han Lin, Kai-Chih Liang, Shyan-Ming Yuan",
+  "title": "The Experience of Using Java-based Message-Oriented Middleware to Build a Distributed Training Simulator",
+  "venue": "13th International Conference and Workshop on Database and Expert Systems Applications (DEXA), pp. 64-68, Sep. 2002",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2002,
+  "authors": "Chuan-Pao Hung, Hsin-Ta Chiao, Yue-Shan Chang, Tsun-Yu Hsiao, Tzu-Han Kao, Shyan-Ming Yuan",
+  "title": "FJM: A Fast Java Message Delivery Mechanism based on IP-Multicast",
+  "venue": "3rd International Conference on Communications in Computing (CIC), June 2002",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2002,
+  "authors": "鄭明俊、焦信達、張玉山、袁賢銘",
+  "title": "CRMA - 一個支援 Context-Aware 計算的行動代理人平台",
+  "venue": "二○○二數位生活與網際網路科技研討會，2002 年",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2002,
+  "authors": "林均翰、焦信達、袁賢銘",
+  "title": "以 Java 為基礎的分散式即時計算環境",
+  "venue": "二○○二數位生活與網際網路科技研討會，2002 年",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2001,
+  "authors": "Hsin-Ta Chiao, Shyan-Ming Yuan",
+  "title": "An Enhanced Thread Synchronization Mechanism for Java",
+  "venue": "Software – Practice and Experience, vol. 31, no. 7, pp. 667-695, June 2001",
+  "note": "SCI, IF 3.5",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2001,
+  "authors": "Hsin-Ta Chiao, Shen-Tzay Huang, Scott Hsu-Jing Kao, Shyan-Ming Yuan",
+  "title": "A Portable Real-Time Extension Set for Java",
+  "venue": "2001 IEEE Canadian Conference on Electrical and Computer Engineering, vol. 1, pp. 47-52, May 2001",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2001,
+  "authors": "焦信達、高叔敬、黃申在、袁賢銘",
+  "title": "一個具可攜性的 Real-Time Java 擴充程式庫",
+  "venue": "廿一世紀數位生活與網際網路科技研討會，2001 年",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "journal_intl",
+  "year": 2000,
+  "authors": "Hsin-Ta Chiao, Chi-Houng Wu, Shyan-Ming Yuan",
+  "title": "A More Expressive Monitor for Concurrent Java Programming",
+  "venue": "Lecture Notes in Computer Science, vol. 1900, pp. 1053-1060, Aug. 2000",
+  "note": "EI",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 2000,
+  "authors": "Hsin-Ta Chiao, Shyan-Ming Yuan",
+  "title": "A New Approach to Determining the Time-Stamping Counter's Overhead on the Pentium Pro Processors",
+  "venue": "CSCC-MCP-MCME, vol. 2, pp. 183-188, July 2000",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 2000,
+  "authors": "焦信達、吳志泓、袁賢銘",
+  "title": "改進 Java 的執行緒同步機制",
+  "venue": "2000 網際網路與分散式系統研討會，第 360-367 頁，2000 年",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_intl",
+  "year": 1999,
+  "authors": "Yue-Shan Chang, Shyan-Ming Yuan, Hsin-Ta Chiao, Chi-Hwang Chiu, Wei-Pung Tsay",
+  "title": "Design and Implementation of IIPC Locking Facility",
+  "venue": "International Conference on Parallel and Distributed Processing Techniques and Applications, pp. 2321-2327, Jan. 1999",
+  "note": "",
+  "corresponding": false
+ },
+ {
+  "type": "conf_zh",
+  "year": 1997,
+  "authors": "Hsin-Ta Chiao, Ming-Tone Tsai, Shyan-Ming Yuan",
+  "title": "PROTOOL - An Automated Development Tool for Sun RPC Programming",
+  "venue": "1997 National Computer Symposium, pp. E164-169, Dec. 1997",
+  "note": "",
+  "corresponding": false
+ }
+]

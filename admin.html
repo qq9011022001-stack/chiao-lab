@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>資料後台 — 焦信達實驗室網站</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f3d2b;--paper:#fbfaf7;--panel:#f1efe8;--line:#ddd9cf;--text:#22261f;--muted:#5c6157;--warn:#8a5a2b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font-family:"Noto Sans TC",sans-serif;font-size:15px;line-height:1.8}
+header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:10}
+.hin{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.hin b{font-family:"Noto Serif TC",serif;color:var(--ink);font-size:17px}
+main{max-width:1080px;margin:0 auto;padding:24px 20px 90px}
+.note{background:var(--panel);border-left:3px solid var(--ink);padding:14px 18px;font-size:14px;margin:0 0 24px}
+.note p{margin:0 0 6px}
+.note p:last-child{margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tabs button{font:inherit;font-size:14px;padding:6px 15px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;cursor:pointer}
+.tabs button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+button.act{font:inherit;font-size:14px;padding:7px 16px;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:4px;cursor:pointer}
+button.act.ghost{background:transparent;color:var(--ink)}
+button.act.danger{border-color:#9c3b2b;color:#9c3b2b;background:transparent}
+input.find{font:inherit;font-size:14px;padding:6px 12px;border:1px solid var(--line);border-radius:4px;min-width:200px;flex:1;max-width:300px}
+.item{border:1px solid var(--line);background:#fff;border-radius:6px;padding:14px 16px;margin-bottom:10px}
+.item summary{cursor:pointer;font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.item summary::-webkit-details-marker{display:none}
+.item summary .yr{color:var(--warn);font-size:13px;white-space:nowrap}
+.fields{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);display:grid;gap:10px}
+.f label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:2px}
+.f input[type=text],.f input[type=number],.f textarea,.f select{
+  width:100%;font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--text)
+}
+.f textarea{min-height:66px;resize:vertical}
+.f.check{display:flex;align-items:center;gap:8px}
+.f.check label{margin:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rowbtns{display:flex;gap:8px;margin-top:6px}
+.count{color:var(--muted);font-size:13.5px}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:5px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none}
+#toast.show{opacity:1}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header><div class="hin">
+  <b>資料後台</b>
+  <div class="bar" style="margin:0">
+    <button class="act ghost" id="btn-load-file">上傳 JSON 覆蓋</button>
+    <button class="act" id="btn-save">下載目前分頁的 JSON</button>
+    <a class="act ghost" href="index.html" style="text-decoration:none;display:inline-block">回網站</a>
+  </div>
+</div></header>
+
+<main>
+  <div class="note">
+    <p><b>使用方式</b>：在這裡編輯資料 → 按「下載目前分頁的 JSON」→ 把下載的檔案上傳到 GitHub repo 的 <code>data/</code> 資料夾覆蓋同名檔案 → 網站幾分鐘內自動更新。</p>
+    <p>本頁不會自動存檔，也不會改到 GitHub 上的檔案。編輯完記得下載。</p>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="bar">
+    <button class="act" id="btn-add">＋ 新增一筆</button>
+    <input class="find" id="find" type="search" placeholder="搜尋…">
+    <span class="count" id="count"></span>
+  </div>
+  <div id="list"></div>
+</main>
+
+<input type="file" id="file" accept=".json" hidden>
+<div id="toast"></div>
+
+<script>
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const toast = m => { const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1900); };
+
+/* 各資料檔的欄位定義 */
+const SCHEMA = {
+  publications: {
+    file:'publications.json', label:'論文著作', array:true,
+    title: x => `${x.title||'（未命名）'}`,
+    sub: x => x.year,
+    fields:[
+      {k:'type',label:'類型',type:'select',options:{journal_intl:'國際期刊',conf_intl:'國際研討會',standard:'國際標準提案',journal_zh:'國內期刊與專書',conf_zh:'國內研討會',report:'技術報告與法規'}},
+      {k:'year',label:'年份',type:'number'},
+      {k:'title',label:'標題',type:'textarea'},
+      {k:'authors',label:'作者（依序，以逗號或頓號分隔）',type:'textarea'},
+      {k:'venue',label:'出處（期刊／研討會、卷期、頁碼、月份）',type:'textarea'},
+      {k:'note',label:'備註（如 SCI, IF 3.5／接受率）',type:'text'},
+      {k:'corresponding',label:'焦教授為通訊作者',type:'check'}
+    ],
+    blank:{type:'conf_zh',year:new Date().getFullYear(),title:'',authors:'',venue:'',note:'',corresponding:false}
+  },
+  projects: {
+    file:'projects.json', label:'研究計畫', array:true,
+    title: x => x.title||'（未命名）',
+    sub: x => `${x.start||''}`,
+    fields:[
+      {k:'title',label:'計畫名稱',type:'textarea'},
+      {k:'funder',label:'補助／委託單位',type:'text'},
+      {k:'role',label:'擔任角色',type:'text'},
+      {k:'org',label:'執行機構',type:'text'},
+      {k:'start',label:'起（如 2026.07）',type:'text'},
+      {k:'end',label:'訖（如 2027.02）',type:'text'},
+      {k:'year',label:'排序年份',type:'number'}
+    ],
+    blank:{title:'',funder:'國家科學委員會',role:'主持人',org:'東海大學',start:'',end:'',year:new Date().getFullYear()}
+  },
+  patents: {
+    file:'patents.json', label:'專利', array:true,
+    title: x => x.title||'（未命名）',
+    sub: x => x.number,
+    fields:[
+      {k:'title',label:'專利名稱',type:'textarea'},
+      {k:'inventors',label:'發明人',type:'textarea'},
+      {k:'country',label:'國別',type:'text'},
+      {k:'number',label:'專利號',type:'text'},
+      {k:'date',label:'公告日期（顯示用文字）',type:'text'},
+      {k:'year',label:'排序年份',type:'number'}
+    ],
+    blank:{title:'',inventors:'',country:'中華民國',number:'',date:'',year:new Date().getFullYear()}
+  },
+  news: {
+    file:'site.json', path:'news', label:'最新消息', array:true,
+    title: x => x.text||'（空白）', sub: x => x.date,
+    fields:[{k:'date',label:'日期（如 2026.07）',type:'text'},{k:'text',label:'內容',type:'textarea'}],
+    blank:{date:'',text:''}
+  },
+  members: {
+    file:'site.json', path:'members', label:'實驗室成員', array:true,
+    title: x => x.name||'（未命名）', sub: x => x.group,
+    fields:[
+      {k:'group',label:'分組（如 碩士班／大學部專題／畢業校友）',type:'text'},
+      {k:'name',label:'姓名',type:'text'},
+      {k:'year',label:'年級或入學年',type:'text'},
+      {k:'topic',label:'研究主題',type:'text'}
+    ],
+    blank:{group:'碩士班',name:'',year:'',topic:''}
+  },
+  awards: {
+    file:'profile.json', path:'awards', label:'獲獎紀錄', array:true, plain:true,
+    title: x => x, sub: () => '',
+    fields:[{k:'_',label:'獎項名稱',type:'textarea'}],
+    blank:''
+  },
+  talks: {
+    file:'profile.json', path:'talks', label:'演講授課', array:true,
+    title: x => x.title||'（未命名）', sub: x => x.year,
+    fields:[{k:'year',label:'時間（如 2026.08）',type:'text'},{k:'title',label:'講題',type:'textarea'},{k:'host',label:'主辦單位／場合',type:'text'}],
+    blank:{year:'',title:'',host:''}
+  },
+  profile: {
+    file:'profile.json', label:'基本資料', array:false,
+    fields:[
+      {k:'lab_name',label:'研究室名稱',type:'text'},
+      {k:'tagline',label:'首頁大標（可用換行斷句）',type:'textarea'},
+      {k:'intro',label:'教師簡介',type:'textarea'},
+      {k:'email',label:'電子郵件',type:'text'},
+      {k:'phone',label:'聯絡電話',type:'text'},
+      {k:'expertise',label:'學術專長（一行一個）',type:'lines'},
+      {k:'research_areas',label:'研究主題（三欄，JSON 格式：title / desc）',type:'json'}
+    ]
+  }
+};
+
+const FILES = ['profile.json','publications.json','projects.json','patents.json','site.json'];
+const store = {};
+let tab = 'publications';
+let filter = '';
+
+async function boot(){
+  try{
+    const r = await Promise.all(FILES.map(f=>fetch('data/'+f,{cache:'no-store'}).then(x=>x.json())));
+    FILES.forEach((f,i)=>store[f]=r[i]);
+  }catch(e){
+    alert('讀取 data/ 內的 JSON 失敗。請用 GitHub Pages 或本機伺服器開啟此頁（python -m http.server），或用「上傳 JSON 覆蓋」手動載入。');
+    FILES.forEach(f=>store[f]=f==='profile.json'||f==='site.json'?{}:[]);
+  }
+  renderTabs(); render();
+}
+
+function getList(key){
+  const s = SCHEMA[key];
+  const root = store[s.file];
+  if(!s.array) return root;
+  return s.path ? (root[s.path] = root[s.path]||[]) : (store[s.file] = root||[]);
+}
+
+function renderTabs(){
+  document.getElementById('tabs').innerHTML = Object.keys(SCHEMA)
+    .map(k=>`<button data-k="${k}" class="${k===tab?'on':''}">${SCHEMA[k].label}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.k;filter='';document.getElementById('find').value='';renderTabs();render();});
+}
+
+function field(f, val, idx){
+  const id = `f_${idx}_${f.k}`;
+  let input;
+  if(f.type==='check') return `<div class="f check"><input type="checkbox" id="${id}" data-k="${f.k}" ${val?'checked':''}><label for="${id}">${f.label}</label></div>`;
+  if(f.type==='textarea') input=`<textarea id="${id}" data-k="${f.k}">${esc(val)}</textarea>`;
+  else if(f.type==='lines') input=`<textarea id="${id}" data-k="${f.k}" data-kind="lines">${esc((val||[]).join('\n'))}</textarea>`;
+  else if(f.type==='json') input=`<textarea id="${id}" data-k="${f.k}" data-kind="json" style="min-height:150px;font-family:monospace;font-size:13px">${esc(JSON.stringify(val||[],null,2))}</textarea>`;
+  else if(f.type==='select') input=`<select id="${id}" data-k="${f.k}">${Object.entries(f.options).map(([v,t])=>`<option value="${v}" ${v===val?'selected':''}>${t}</option>`).join('')}</select>`;
+  else if(f.type==='number') input=`<input type="number" id="${id}" data-k="${f.k}" value="${esc(val)}">`;
+  else input=`<input type="text" id="${id}" data-k="${f.k}" value="${esc(val)}">`;
+  return `<div class="f"><label for="${id}">${f.label}</label>${input}</div>`;
+}
+
+function render(){
+  const s = SCHEMA[tab];
+  const box = document.getElementById('list');
+  document.getElementById('btn-add').style.display = s.array?'':'none';
+  document.getElementById('find').style.display = s.array?'':'none';
+
+  if(!s.array){
+    const obj = getList(tab);
+    document.getElementById('count').textContent='';
+    box.innerHTML = `<div class="item"><div class="fields" data-i="0">${s.fields.map(f=>field(f,obj[f.k],0)).join('')}</div></div>`;
+    bindInputs(obj,0);
+    return;
+  }
+
+  const list = getList(tab);
+  document.getElementById('count').textContent = `共 ${list.length} 筆`;
+  const hits = list.map((x,i)=>({x,i})).filter(({x}) =>
+    !filter || JSON.stringify(x).toLowerCase().includes(filter.toLowerCase()));
+
+  box.innerHTML = hits.map(({x,i})=>`
+    <details class="item">
+      <summary><span>${esc(s.title(x))}</span><span class="yr">${esc(s.sub(x))}</span></summary>
+      <div class="fields" data-i="${i}">
+        ${s.plain ? field(s.fields[0], x, i) : s.fields.map(f=>field(f,x[f.k],i)).join('')}
+        <div class="rowbtns">
+          <button class="act ghost" data-up="${i}">↑ 上移</button>
+          <button class="act danger" data-del="${i}">刪除這筆</button>
+        </div>
+      </div>
+    </details>`).join('') || '<p class="count">沒有符合的資料。</p>';
+
+  hits.forEach(({x,i})=>bindInputs(x,i));
+  box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{
+    if(confirm('確定刪除？')){ getList(tab).splice(+b.dataset.del,1); render(); toast('已刪除，記得下載 JSON'); }
+  });
+  box.querySelectorAll('[data-up]').forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.up; if(i>0){ const l=getList(tab); [l[i-1],l[i]]=[l[i],l[i-1]]; render(); }
+  });
+}
+
+function bindInputs(obj,i){
+  document.querySelectorAll(`.fields[data-i="${i}"] [data-k]`).forEach(el=>{
+    el.oninput = el.onchange = () => {
+      const k = el.dataset.k, kind = el.dataset.kind;
+      let v = el.type==='checkbox' ? el.checked : el.value;
+      if(el.type==='number') v = Number(v);
+      if(kind==='lines') v = el.value.split('\n').map(x=>x.trim()).filter(Boolean);
+      if(kind==='json'){ try{ v = JSON.parse(el.value); el.style.borderColor=''; }catch(e){ el.style.borderColor='#9c3b2b'; return; } }
+      if(SCHEMA[tab].plain){ getList(tab)[i] = v; }
+      else obj[k] = v;
+    };
+  });
+}
+
+document.getElementById('find').oninput = e => { filter=e.target.value; render(); };
+
+document.getElementById('btn-add').onclick = () => {
+  const s = SCHEMA[tab];
+  getList(tab).unshift(s.plain ? s.blank : JSON.parse(JSON.stringify(s.blank)));
+  filter=''; document.getElementById('find').value='';
+  render();
+  const first = document.querySelector('.item'); if(first) first.open = true;
+  toast('已新增一筆，請填寫內容');
+};
+
+document.getElementById('btn-save').onclick = () => {
+  const f = SCHEMA[tab].file;
+  const blob = new Blob([JSON.stringify(store[f],null,1)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = f; a.click();
+  URL.revokeObjectURL(a.href);
+  toast(`已下載 ${f}，請上傳到 GitHub 的 data/ 覆蓋`);
+};
+
+document.getElementById('btn-load-file').onclick = () => document.getElementById('file').click();
+document.getElementById('file').onchange = e => {
+  const file = e.target.files[0]; if(!file) return;
+  const fr = new FileReader();
+  fr.onload = () => {
+    try{
+      const data = JSON.parse(fr.result);
+      if(!FILES.includes(file.name)) return alert('檔名需為 '+FILES.join('、'));
+      store[file.name] = data; render(); toast(`已載入 ${file.name}`);
+    }catch(err){ alert('JSON 格式錯誤：'+err.message); }
+  };
+  fr.readAsText(file);
+  e.target.value='';
+};
+
+boot();
+</script>
+</body>
+</html>

@@ -309,7 +309,8 @@ document.getElementById('btn-save').onclick = () => {
   toast(`已下載 ${f}，請上傳到 GitHub 的 data/ 覆蓋`);
 };
 
-document.getElementById('btn-load-file').onclick = () => document.getElementById('file').click();
+const btnLoad = document.getElementById('btn-load-file');
+if(btnLoad) btnLoad.onclick = () => document.getElementById('file').click();
 document.getElementById('file').onchange = e => {
   const file = e.target.files[0]; if(!file) return;
   const fr = new FileReader();
